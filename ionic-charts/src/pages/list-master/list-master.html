@@ -1,0 +1,50 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>
+        <ion-icon style="color: #DC143C" name="pulse"></ion-icon> Pulse
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            <ion-icon style="color: #ff7700" name="logo-bitcoin"></ion-icon>
+            Bitcoin 
+            <ion-badge item-end>{{ lineChartData_BTC_usd[0].data[lineChartData_BTC_usd[0].data.length - 2] }}</ion-badge>
+        </ion-card-header>
+        <ion-card-content>
+            <canvas baseChart height="150"
+            [datasets]="lineChartData_BTC_usd"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-header>
+              <ion-icon item-start style="color: #55acee" name="logo-twitter"></ion-icon>
+              Twitter
+              <ion-badge item-end>{{ lineChartDataBTC_tweet[0].data[lineChartDataBTC_tweet[0].data.length - 2] }}</ion-badge>
+          </ion-card-header>
+          <ion-card-content>
+              <canvas baseChart height="150"
+              [datasets]="lineChartDataBTC_tweet"
+              [labels]="lineChartLabels"
+              [options]="barChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+<!--               <p>It is recommended to buy a few coins if  </p>
+ -->          </ion-card-content>
+        </ion-card>
+  </ion-content>

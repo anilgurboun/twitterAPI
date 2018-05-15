@@ -1,9 +1,9 @@
 var Twit = require('twit')
 var T = new Twit({
-  consumer_key:         '',
-  consumer_secret:      '',
-  access_token:         '',
-  access_token_secret:  '',
+  consumer_key:         'r5svvAM7pJfZ7xL8llQPXtw2p',
+  consumer_secret:      'yGfWnX94oiuShEZFuVtV7mBR1IXSI2u3ombo1NET4SVAqZX92E',
+  access_token:         '426129228-ORNN8pwUv8DFsumaOqAJbavIoq4aijrHdVteSQc8',
+  access_token_secret:  'IHukj3F4mfWHZtNkEXd4gyzxDdP7oNqBFvjRxnQ7XKhMf',
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 })
 var btc=0, 

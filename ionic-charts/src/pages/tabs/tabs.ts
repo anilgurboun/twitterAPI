@@ -1,19 +1,27 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { IonicPage, NavController } from 'ionic-angular';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
+import { Tab1Root, Tab2Root, Tab3Root } from '../';
 
+@IonicPage()
 @Component({
+  selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
+  tab1Root: any = Tab1Root;
+  tab2Root: any = Tab2Root;
+  tab3Root: any = Tab3Root;
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab1Title = " ";
+  tab2Title = " ";
+  tab3Title = " ";
 
-  constructor() {
-
+  constructor(public navCtrl: NavController, public translateService: TranslateService) {
+   
+      this.tab1Title = "Bitcoin";
+      this.tab2Title = "Ethereum";
+      this.tab3Title = "Litecoin";
+    };
   }
-}
