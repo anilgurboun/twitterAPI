@@ -1,4 +1,4 @@
-# twitterAPI
+# Pulse, formerly known as cryptocast
 Sandbox for the Twitter API project, boun related.  
 Below you may find steps to successfully run the project:
 
