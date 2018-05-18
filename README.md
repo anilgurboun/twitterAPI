@@ -7,6 +7,10 @@ git clone https://github.com/anilgurboun/twitterAPI
 ```
 
 ```
+cd ionic-charts
+```
+
+```
 npm install
 ```
 
